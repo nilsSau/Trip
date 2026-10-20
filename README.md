@@ -11,7 +11,7 @@ A ready-to-host, no-build, no-backend planning site for **Stockholm, 18–20 Nov
 5. Select **Deploy from a branch**, choose **main**, folder **/ (root)**, and **Save**.
 6. Wait for Pages to publish. Open the URL it shows, usually `https://your-username.github.io/stockholm-2026/`.
 
-The site also opens locally by double-clicking `index.html` but **share-ranking links only work after it is on a web URL**. The map, fonts and photographs need internet access.
+The site also opens locally by double-clicking `index.html` but **share-ranking links only work after it is on a web URL**. The fonts and externally hosted photographs need internet access. Each card includes a direct Google Maps link; there is no embedded map.
 
 ## How friends rank and vote
 
@@ -28,10 +28,10 @@ Edit `data.js` to change titles, descriptions, locations, prices, photos and sta
 
 Photo URLs are externally hosted, from Wikimedia Commons and venue/visitor-information websites. Click **PHOTO SOURCES + NOTES** inside the site for attribution and source links. Where exact venue photos were not available, representative photographs are explicitly labeled *Vibe image*. Please respect each credited photographer's license if reusing, copying, or modifying an image. If you want the website to work entirely offline, replace `images[].src` entries with local pictures you have permission to use and include those files in the repository.
 
-Venue ticket prices are adult indicative prices as checked in **October 2026**, or plainly marked estimates. In particular, the **Old Town Christmas market starts Nov 22**, **Skansen market starts Nov 27**, and the **pizza boat finishes in September**, so they are tagged unavailable for Nov 18–20. The Slosehotel gaming location and rate have not been independently confirmed beyond its own website; please verify directly before prepaying.
+Prices are approximate adult admission prices in **euros (€)**, rounded from Swedish krona at roughly **€0.0899 per SEK on 20 October 2026**. Venues may charge a different amount in SEK when you visit. The **Old Town Christmas market starts Nov 22** and **Skansen market starts Nov 27**, so holiday markets are tagged unavailable for Nov 18–20. Some venue details have not been independently confirmed: check their sites for current hours and availability before booking.
 
-The map uses Leaflet and OpenStreetMap raster tiles; no API key is required. Pins are approximate meeting points, not exact entrances. If the map does not load, every card has a Google Maps search/directions link.
+The embedded map was removed to avoid unreliable loading from third-party map servers. The MAPS button on each card opens its location in Google Maps, so you can still navigate to each experience.
 
 ## License / usage
 
-Code and written descriptions were created for this travel-planning project. External photo, font, map and venue content belong to their respective owners under their own terms and licenses. The project does not claim ownership of those assets or affiliation with the listed venues.
+Code and written descriptions were created for this travel-planning project. External photo, font and venue content belong to their respective owners under their own terms and licenses. The project does not claim ownership of those assets or affiliation with the listed venues.
