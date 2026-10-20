@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1115" />
+  <meta name="description" content="Our Stockholm 18–20 November adventure shortlist: compare, rank, share and vote on unforgettable activities." />
+  <meta property="og:title" content="STOCKHOLM // THE HIT LIST" />
+  <meta property="og:description" content="28 big, weird, fun and budget-friendly adventures. Drag to rank your favorites." />
+  <title>STOCKHOLM // THE HIT LIST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="data.js" defer></script>
+  <script src="gallery-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+ <div class="progress-line" id="progressLine"></div>
+ <header class="site-header wrap">
+  <a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark">✳</span> STHLM<span class="muted">/</span>26</a>
+  <nav class="nav-links"><a href="#list">THE LIST</a><button id="openVoteTop" class="nav-button">GROUP VOTE <span>↗</span></button></nav>
+ </header>
+ <main id="top">
+ <section class="hero wrap">
+   <div class="hero-text">
+     <div class="eyebrow"><span class="live-dot"></span> 18—20 NOV 2026 <span class="eyebrow-line"></span> WED → FRI</div>
+     <h1>GO BIG.<br><em>GET LOST.</em><br>REMEMBER.</h1>
+     <p>Not another boring tourist checklist. Huge ships, frozen swims, unreal science, ridiculous games and free views worth staying up for.</p>
+     <div class="hero-buttons"><a class="btn btn-primary" href="#list">START RANKING <span>↓</span></a><button class="btn btn-secondary" id="openVoteHero">HOW GROUP VOTING WORKS ↗</button></div>
+     <div class="hero-figures"><div><strong id="placeCount">28</strong><span>IDEAS TO ARGUE ABOUT</span></div><div><strong>3</strong><span>DAYS TO MAKE COUNT</span></div><div><strong>€0</strong><span>FOR SOME OF THE BEST</span></div></div>
+   </div>
+   <div class="hero-visual" aria-label="Stockholm trip mood photos">
+     <div class="hero-visual-main" style="background-image:linear-gradient(0deg,rgba(7,11,14,.42),transparent 60%),url('https://commons.wikimedia.org/wiki/Special:FilePath/Stockholm_Vasa_Museum_01.jpg?width=1400')"><span class="photo-caption">01 / MASSIVE REAL-LIFE HISTORY</span></div>
+     <div class="hero-visual-side top" style="background-image:linear-gradient(0deg,rgba(7,11,14,.45),transparent),url('https://commons.wikimedia.org/wiki/Special:FilePath/Stockholm_from_Monteliusv%C3%A4gen.jpg?width=1000')"><span class="photo-caption">02 / NO-COST CITY MAGIC</span></div>
+     <div class="hero-visual-side bottom" style="background-image:linear-gradient(0deg,rgba(7,11,14,.45),transparent),url('https://www.skansen.se/wp-content/uploads/2024/01/bssc-tunnel.jpg')"><span class="photo-caption">03 / UNDERWATER WORLDS</span></div>
+     <div class="hero-stamp">THE<br>HIT<br>LIST<span>↗</span></div>
+   </div>
+ </section>
+ <div class="ticker"><div>BIG WOW <span>✳</span> SMALL BUDGET <span>✳</span> GOOD STORIES <span>✳</span> TERRIBLE GROUP DECISIONS <span>✳</span> BIG WOW <span>✳</span> SMALL BUDGET <span>✳</span> GOOD STORIES <span>✳</span> TERRIBLE GROUP DECISIONS <span>✳</span></div></div>
+ <section id="list" class="listing wrap">
+  <div class="section-top"><div><div class="overline">01 // BUILD YOUR RANKING</div><h2>THE <i>SHORTLIST.</i></h2><p class="section-lede">Every page starts shuffled. <strong>Drag cards by the grip</strong> (or use ↑ ↓), and move your top choices to the top. Your browser remembers your order. Vote with your friends by sharing your ranking link.</p></div><div class="filters-heading">YOUR ORDER <span id="saveStatus">● Saved locally</span></div></div>
+  <div class="trip-notice"><span class="notice-icon">!</span><div><strong>Heads-up for Nov 18–20.</strong> The major Christmas markets begin <em>after your dates</em>. Prices are approximate adult prices shown in euros, converted at €0.0899 per SEK (20 Oct 2026); the venues charge in Swedish kronor. Check current prices and schedules before booking. Each card has 5+ photos: tap thumbnails or VIEW LARGER. Images tagged “VIBE PHOTO” are illustrative, not necessarily taken at the venue.</div></div>
+  <div class="toolbar" aria-label="Sort and filter options">
+    <div class="chip-scroll" id="categoryChips"><button class="chip active" data-filter="All">ALL <span id="allCount">28</span></button></div>
+    <div class="toolbar-actions"><label class="toggle"><input type="checkbox" id="hideUnavailable"><span class="toggle-ui"></span> Hide unavailable</label><button class="tool-button" id="resetOrder">↝ RESHUFFLE</button></div>
+  </div>
+  <div class="ranking-help"><span>↕</span> DRAG A CARD TO CHANGE ITS RANK <span class="help-divider">/</span> <span>♥</span> HEART THE ONES YOU'D ACTUALLY GO TO <span class="help-divider">/</span> <span>↑↓</span> WORK ON MOBILE TOO</div>
+  <div id="cards" class="cards" aria-live="polite"></div>
+  <div class="empty-state" id="emptyState" hidden>No places match this filter. Try showing everything.</div>
+  <div class="bottom-cta"><div><div class="overline">02 // MAKE THE CALL</div><h3>EVERYONE HAS AN OPINION.<br><i>NOW COMPARE THEM.</i></h3><p>Share a personal ranked link or paste everyone's links together to build a group scoreboard. No account required.</p></div><button class="btn btn-primary" id="openVoteBottom">OPEN GROUP VOTE ↗</button></div>
+ </section>
+ </main>
+ <footer class="footer wrap"><div class="footer-left"><strong>STHLM<span>/</span>26</strong><p>Made for making questionable plans and excellent memories.</p></div><div class="footer-links"><a href="#top">BACK TO TOP ↑</a><button id="photoCredits">PHOTO SOURCES + NOTES ↗</button></div><div class="footer-meta">STOCKHOLM · 18—20 NOVEMBER 2026<br>APPROXIMATE PRICES IN EUROS (€)<br>NOT AFFILIATED WITH THE VENUES</div></footer>
+ <dialog id="voteDialog" class="dialog"><div class="dialog-shell"><div class="dialog-top"><span class="overline">GROUP DECISION ENGINE // V1</span><button class="close-dialog" data-close="voteDialog" aria-label="Close">✕</button></div><h2>SETTLE THE <i>ARGUMENT.</i></h2><p class="dialog-intro">This is a static GitHub Pages site, so rankings stay on each person's device. Share links and combine them manually below; there is no hidden server or automatic group synchronization.</p><div class="two-panels"><section class="panel"><div class="step-num">01</div><h3>SHARE YOUR RANKING</h3><label for="voterName">Your name (optional)</label><input type="text" id="voterName" placeholder="e.g. Alex" maxlength="35" autocomplete="nickname"><p>Move your favorite places to the top first. A share link includes your entire ranking and name.</p><div class="panel-actions"><button id="copyRankLink" class="btn btn-primary small">COPY MY RANKING LINK ↗</button><button id="downloadRank" class="btn btn-ghost small">DOWNLOAD CSV ↓</button></div><p id="copyFeedback" class="feedback" aria-live="polite"></p></section><section class="panel"><div class="step-num">02</div><h3>COUNT FRIENDS’ VOTES</h3><label for="friendLinks">Paste one shared ranking URL per line</label><textarea id="friendLinks" rows="5" placeholder="https://.../?rank=...&name=...&#10;https://.../?rank=...&name=..."></textarea><p>Group ranking uses average position. Smaller average rank = more popular. Your own current ranking is included by default.</p><button id="calculateVotes" class="btn btn-ghost small">CALCULATE GROUP SCORE →</button><p id="voteFeedback" class="feedback" aria-live="polite"></p></section></div><div id="voteResults" class="vote-results" hidden><h3>GROUP TOP PICKS</h3><div id="resultsList"></div><button class="btn btn-secondary small" id="downloadGroupCSV">DOWNLOAD GROUP RESULT CSV ↓</button></div></div></dialog>
+ <dialog id="creditsDialog" class="dialog"><div class="dialog-shell"><div class="dialog-top"><span class="overline">CREDITS // SOURCES</span><button class="close-dialog" data-close="creditsDialog" aria-label="Close">✕</button></div><h2>PHOTO <i>CREDITS.</i></h2><p class="dialog-intro">Images load from their original external hosts to keep this downloadable website lightweight. Each card includes photo source links and five or more photo references. Third-party hosts sometimes block image hotlinking; the gallery will try the next photo. Some are representative “vibe images,” not photos of that exact venue. Wikimedia Commons image licences and credited authors remain the responsibility of each file's own page.</p><div id="creditsList" class="credits-list"></div><p class="dialog-intro">Opening hours and prices researched October 2026 from the linked venue websites. Prices converted at approximately €0.0899 per SEK as of 20 October 2026 and rounded for planning. Recheck for changes, seasonal closures, age limits and tickets before going. A few price ranges are budget estimates. No affiliation, sponsorship or endorsement.</p></div></dialog>
+<dialog id="photoDialog" class="photo-lightbox" aria-label="Image gallery"><div class="photo-lightbox-shell"><header><div><div class="photo-lightbox-eyebrow" id="lightboxCount">PHOTO 1 / 5</div><h2 id="lightboxTitle">PHOTOS</h2></div><button data-lightbox="close" aria-label="Close photo viewer">✕</button></header><div class="lightbox-body"><button class="lightbox-arrow" data-lightbox="prev" aria-label="Previous photo">‹</button><img id="lightboxImage" alt="Expanded travel photo"><button class="lightbox-arrow" data-lightbox="next" aria-label="Next photo">›</button></div><footer><a id="lightboxPhotoCredit" target="_blank" rel="noopener noreferrer" href="#">Original image ↗</a><span>← → CHANGE PHOTO · ESC CLOSE</span></footer></div></dialog>
+ <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Stockholm The Hit List","description":"Collaborative shortlist of travel activities in Stockholm for November 18–20 2026."}</script>
+</body></html>
